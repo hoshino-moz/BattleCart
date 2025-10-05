@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
     public void MoveToRight()
     {
         if(IsStun()) return;
-        if (controller.isGrounded && targetLane > MaxLane)
+        if (controller.isGrounded && targetLane < MaxLane)
             targetLane++;
     }
 
@@ -113,8 +113,11 @@ public class PlayerController : MonoBehaviour
     //スタン中かチェック
     bool IsStun()
     {
+        //recoverTimeが作動中かLifeが0になった場合はStunフラグがON
         bool stun = recoverTime > 0.0f || life <= 0.0f;
+        //StunフラグがOFFの場合はボディを確実に表示
         if (!stun) body.SetActive(true);
+        //Stunフラグをリターン
         return stun;
     }
 
