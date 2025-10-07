@@ -1,4 +1,6 @@
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -17,6 +19,21 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.playing;
         stagePoints = 0; //ポイントリセット
+
+        //シーン名の取得
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName= currentScene.name;
+
+        switch (sceneName)
+        {
+            case "Title":
+                SoundManager.instance.PlayBgm(BGMType.Title);
+                break;
+            case "BaseStage":
+                SoundManager.instance.PlayBgm(BGMType.InGame);
+                break;
+        }
     }
 
 }
