@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public GameObject body;
     public GameObject boms;
 
+    //音にまつわるコンポーネントとSE音情報
     AudioSource audio;
     public AudioClip se_shot;
     public AudioClip se_damage;

@@ -4,18 +4,21 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-
+    //反映対象
     public TextMeshProUGUI odometerText;
     public TextMeshProUGUI bulletText;
     public TextMeshProUGUI maxScoreText;
     public Slider lifeSlider;
 
+    //データ元
     PlayerController player;
     Shooter shooter;
 
+    //一時記録値
     int currentShotPower;
     int currentPlayerLife;
 
+    //ゲームステータスによる表示/非表示の指定のため取得
     public GameObject odometerPanel;
     public GameObject bulletPanel;
     public GameObject playerLifePanel;
@@ -26,6 +29,7 @@ public class UIController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //データ元を取得して各UIに反映
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         shooter = GameObject.FindGameObjectWithTag("Shooter").GetComponent<Shooter>();
         maxScoreText.text = PlayerPrefs.GetFloat("Score").ToString("F1");
@@ -69,7 +73,7 @@ public class UIController : MonoBehaviour
             Cursor.lockState = CursorLockMode.None; //ロック解除
             Cursor.visible = true; //カーソルを表示
 
-            //何重にも描画処理しないためにステータス変更ｓ
+            //何重にも描画処理しないためにステータス変更
             GameManager.gameState = GameState.end;
         }
     }

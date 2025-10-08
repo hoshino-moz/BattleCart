@@ -4,8 +4,8 @@ using UnityEngine.SearchService;
 
 public class Bullet : MonoBehaviour
 {
-    public float deleteTime = 5.0f;
-    public GameObject boms;
+    public float deleteTime = 5.0f; //削除されるまでの時間
+    public GameObject boms; //爆発のエフェクト
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

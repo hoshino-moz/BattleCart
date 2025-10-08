@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
 
         //シーン名の取得
         Scene currentScene = SceneManager.GetActiveScene();
-
-        string sceneName= currentScene.name;
+        //シーン名の取得
+        string sceneName = currentScene.name;
 
         switch (sceneName)
         {
