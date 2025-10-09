@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6337307374115802254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -160,14 +160,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82325da28f7f52c4189bb63c097b65a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
+  life: 3
   grabity: 9.81
   speedZ: 10
   accelerationZ: 8
   speedX: 10
   speedJump: 10
   body: {fileID: 2567677346424811061}
-  boms: {fileID: 0}
+  boms: {fileID: 3873560931881362710, guid: 950ff70b090967748bfbea55528339c5, type: 3}
+  se_shot: {fileID: 8300000, guid: a478b3aa98f00ec428e0658d74888401, type: 3}
+  se_damage: {fileID: 8300000, guid: 96647c7c42cd2f042bb6c3231505b32d, type: 3}
+  se_jump: {fileID: 8300000, guid: c719c1e25737a9d4393528e17daafb17, type: 3}
 --- !u!82 &6588618506336885492
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180,7 +183,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -7174769783521439603, guid: 801251a2dd748624b8b741ec8414b8bb, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

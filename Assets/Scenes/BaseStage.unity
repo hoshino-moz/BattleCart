@@ -653,21 +653,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 773670531659668907, guid: 76d63124de7dd9343b3e4d822c39e12f, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6330983616393158871, guid: 76d63124de7dd9343b3e4d822c39e12f, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7618506835629747675, guid: 76d63124de7dd9343b3e4d822c39e12f, type: 3}
-      propertyPath: boms
-      value: 
-      objectReference: {fileID: 3873560931881362710, guid: 950ff70b090967748bfbea55528339c5, type: 3}
-    - target: {fileID: 7618506835629747675, guid: 76d63124de7dd9343b3e4d822c39e12f, type: 3}
-      propertyPath: life
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8286671797162497469, guid: 76d63124de7dd9343b3e4d822c39e12f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,6 +941,14 @@ PrefabInstance:
     - target: {fileID: 1173339198683585343, guid: cac87392ae4d8924b8decde96f9ac458, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201222679469687890, guid: cac87392ae4d8924b8decde96f9ac458, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.852417
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201222679469687890, guid: cac87392ae4d8924b8decde96f9ac458, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.1052246
       objectReference: {fileID: 0}
     - target: {fileID: 5142051653935708075, guid: cac87392ae4d8924b8decde96f9ac458, type: 3}
       propertyPath: m_AnchorMax.y

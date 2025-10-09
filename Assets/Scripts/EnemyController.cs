@@ -1,6 +1,4 @@
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class EnemyController : MonoBehaviour
 {
@@ -16,10 +14,18 @@ public class EnemyController : MonoBehaviour
     public float deletePosY = -10f; //落ちていったら、、消す
     public bool useGravity; //重力あるなし
 
+    GameObject camera;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        //空中車
+        if (useGravity)
+        {
+            Destroy(gameObject, 20);
+        }
     }
 
     void Update()
